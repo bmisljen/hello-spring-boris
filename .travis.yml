@@ -1,0 +1,16 @@
+language: java
+jdk:
+- openjdk8
+sudo: false
+script: mvn clean install
+cache:
+  directories:
+  - "$HOME/.m2"
+deploy:
+  skip_cleanup: true
+  provider: heroku
+  api_key:
+    secure: b3OFNe6ef+m1TRvlZ8fDfpPxo1OmsjM3n42ir+cigUj5hCZ985JWe16d1LnfbIuSKKshqIBcrHm7vFmeR+iR4zRS+5+R5y4mg/Pesc5sbwYBU/g5LdPMhiASpy66TYHSi3Gbg5nZqSY5pAEHTHXp52YDxEVxTfo+6p+7Xwg9p4Cgjdkoe5P23fy8ekZ0DPkysuxqp4UQ2qWvQBRoTJJhUTA/UONPYnWMJos2se8dQPvRa863Ql1PzMkszUpjyS03VqazICPyNcugcfMg0upb8deQaMSkw1TnZjkhSuT4cYZgX/H2u+FOwDY86oz6VTO5548VNGUQ4xRahG9SOpvJALm1KXhztKTP9h8WBsMnH5cHKb4FlxoeV5Fzori5ndHVIJ/L261r1DuPrynUvcU05moePLbh/7XpagAk1EslxEr4IyZw1TEAQ880wiytZEh992OjTgHyKWgjTqnD9FKg6KsSxYArYf3+26YW43Dp7LM/tdu+2jYNunqsqi0yLplHz99MLEfy6M1kax2wtXQ1hrjAQIdS1Cun/57a9wQzXtEI7BqeQ4tGpwk98/sNnFNVSzXVtuQ84TKLJh4HLegCZL65oFeszJefVUvhjYsg1vTdKC69cg3srUGQqIDJEgho5otCguOLMAWIqi2pPnD6oGBRLo/Eqo+alazXU+LHyj4=
+  app: hello-spring-boris
+  on:
+    repo: bmisljen/hello-spring-boris

@@ -1,0 +1,11 @@
+# Login to Heroku Account:
+
+heroku login
+
+# Add the Heroku encrypted API key to the .travis.yml file (Use --pro for projects hosted at travis-ci.com):
+
+travis encrypt $(heroku auth:token) --add deploy.api_key --pro
+
+
+
+
